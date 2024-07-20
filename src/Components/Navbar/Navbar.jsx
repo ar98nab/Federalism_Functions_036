@@ -24,7 +24,9 @@ import {
   CloseIcon,
   ChevronDownIcon,
   ChevronRightIcon,
+  BellIcon,
 } from '@chakra-ui/icons'
+import { Searchbar } from '../Search/Search'
 
 export const Navbar=()=>{
   const { isOpen, onToggle } = useDisclosure()
@@ -64,7 +66,8 @@ export const Navbar=()=>{
             <DesktopNav />
           </Flex>
         </Flex>
-
+        <Searchbar/>
+        <BellIcon h={"60px"} mr={"20px"}/>
         <Stack
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}

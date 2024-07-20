@@ -6,8 +6,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ChakraProvider } from '@chakra-ui/react';
 import { store } from './Redux/Store.js';
+import { SearchContextProvider } from './Context/SearchContext/SearchContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <SearchContextProvider>
   <BrowserRouter>
   <Provider store={store}>
     <ChakraProvider>
@@ -17,5 +19,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </ChakraProvider>
   </Provider>
   </BrowserRouter>
-  
+  </SearchContextProvider>
 );
