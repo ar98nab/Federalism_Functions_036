@@ -1,0 +1,15 @@
+.Buttonup{
+    background-color: blue;
+    color: white;
+    border-radius: 90px;
+    font-family: acumin-pro-wide", "Acumin Pro Wide", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.buttonin{
+    background-color:rgb(240, 230, 230);
+    color: blue
+}
+
+.input{
+    width: 20vw;
+    border-radius: 300px;
+}

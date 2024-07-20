@@ -40,3 +40,49 @@
 .read-the-docs {
   color: #888;
 } */
+.product{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(60, 53, 53);
+  padding-top: 20px;
+}
+
+.card{
+  width: 350px;
+  height: 380px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: white;
+}
+.image{
+  width: 350px;
+  height: 300px;
+}
+.title{
+  font-weight: bold;
+  font-family: "acumin-pro", "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.lowerpart{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.rightpart{
+  display: flex;
+  gap: 10px;
+}
+.single{
+  background-color: black;
+  display: flex;
+ flex-direction: column;
+ gap: 30px;
+ padding:50px
+}
+.singleimg{
+ width: 1000px;
+ height: 500px;
+ margin: auto;
+ 
+}

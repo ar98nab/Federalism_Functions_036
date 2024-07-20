@@ -1,10 +1,14 @@
 import './App.css';
-import { AllRouter } from './Router/AllRpouter/AllRouter';
+
+import { Allrouter } from './Router/AllRpouter/AllRouter';
+import { Navbar } from './Components/Navbar/Navbar';
+
 
 function App() {
   return (
     <>
-      <AllRouter />
+     <Navbar/>
+     <Allrouter/>
     </>
   );
 }
