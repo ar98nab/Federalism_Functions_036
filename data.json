@@ -1,4 +1,16 @@
 {
+  "users": [
+    {
+      "id": "a17f",
+      "email": "rakeshrodda98@gmail.com",
+      "password": "Abc@1234"
+    },
+    {
+      "id": "7342",
+      "email": "123@gmail.com",
+      "password": "Qwerty@123"
+    }
+  ],
   "productdata": [
     {
       "id": "1",
@@ -13,7 +25,6 @@
       "likes": "450",
       "view": "6.7k"
     },
-
     {
       "id": "2",
       "imageurl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/ce6e2e188542823.659da2aa98b2f.png",
@@ -144,7 +155,6 @@
       "likes": "450",
       "view": "6.7k"
     },
-
     {
       "id": "12",
       "imageurl": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a00dee138662839.622176e64f6e9.jpg",
