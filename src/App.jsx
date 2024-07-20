@@ -1,13 +1,19 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import store from './Reducer/store';
 import './App.css';
-
+import Assets from './Components2/Assets';
+import { Provider } from 'react-redux';
+import { ChakraProvider } from '@chakra-ui/react';
 function App() {
-  const [count, setCount] = useState(0);
+ 
 
   return (
     <>
+    <ChakraProvider>
+     <Provider store={store}>
+      <Assets/>
+     </Provider>
+     </ChakraProvider>
+    
      
     </>
   );

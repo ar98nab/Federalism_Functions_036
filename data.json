@@ -9,7 +9,8 @@
       "title": "Photoshoot",
       "Author": "",
       "likes": "450",
-      "view": "6.7k"
+      "view": "6.7k",
+      "price": "100"
     },
 
     {
@@ -21,7 +22,8 @@
       "title": "Clickl",
       "Author": "",
       "likes": "100",
-      "view": "4.2k"
+      "view": "4.2k",
+      "price": "200"
     },
     {
       "id": "3",
@@ -32,7 +34,8 @@
       "title": "Toy Company Website Design",
       "Author": "",
       "likes": "280",
-      "view": "9k"
+      "view": "9k",
+      "price": "400"
     },
     {
       "id": "4",
@@ -43,7 +46,8 @@
       "title": "Sneaker&Co® | UX/UI Design",
       "Author": "",
       "likes": "880",
-      "view": "5.3k"
+      "view": "5.3k",
+      "price": "500"
     },
     {
       "id": "5",
@@ -54,7 +58,8 @@
       "title": "Mochi shop | Landing page",
       "Author": "Luísa Videira",
       "likes": "470",
-      "view": "5.2k"
+      "view": "5.2k",
+      "price": "600"
     },
     {
       "id": "6",
@@ -65,7 +70,8 @@
       "title": "三社祭, Sanja Festival",
       "Author": "",
       "likes": "750",
-      "view": "6.7k"
+      "view": "6.7k",
+      "price": "700"
     },
     {
       "id": "7",
@@ -76,7 +82,8 @@
       "title": "Nights somewhere",
       "Author": "",
       "likes": "95",
-      "view": "1k"
+      "view": "1k",
+      "price": "800"
     },
     {
       "id": "8",
@@ -87,7 +94,8 @@
       "title": "Observation",
       "Author": "",
       "likes": "1050",
-      "view": "17k"
+      "view": "17k",
+      "price": "900"
     },
     {
       "id": "9",
@@ -98,7 +106,8 @@
       "title": "Tokyo in the Rain : Spring scene",
       "Author": "",
       "likes": "50",
-      "view": "600"
+      "view": "600",
+      "price": "1000"
     },
     {
       "id": "10",
@@ -109,7 +118,8 @@
       "title": "Night time",
       "Author": "",
       "likes": "650",
-      "view": "7k"
+      "view": "7k",
+      "price": "1100"
     },
     {
       "id": "11",
@@ -120,7 +130,8 @@
       "title": "The Sea is my Brother",
       "Author": "",
       "likes": "450",
-      "view": "6.7k"
+      "view": "6.7k",
+      "price": "1200"
     },
 
     {
@@ -132,7 +143,8 @@
       "title": "Westlands, a Water Story",
       "Author": "",
       "likes": "100",
-      "view": "4.2k"
+      "view": "4.2k",
+      "price": "1300"
     },
     {
       "id": "13",
@@ -143,7 +155,8 @@
       "title": "A Street In Ginza",
       "Author": "",
       "likes": "280",
-      "view": "9k"
+      "view": "9k",
+      "price": "1400"
     },
     {
       "id": "14",
@@ -154,7 +167,8 @@
       "title": "Mesmerising Glimpse of Majuli",
       "Author": "",
       "likes": "880",
-      "view": "5.3k"
+      "view": "5.3k",
+      "price": "1500"
     },
     {
       "id": "15",
@@ -165,7 +179,8 @@
       "title": "A Lovely Encounter",
       "Author": "",
       "likes": "470",
-      "view": "5.2k"
+      "view": "5.2k",
+      "price": "1600"
     },
     {
       "id": "16",
@@ -176,7 +191,8 @@
       "title": "Adventures in Aerochrome",
       "Author": "",
       "likes": "750",
-      "view": "6.7k"
+      "view": "6.7k",
+      "price": "1700"
     },
     {
       "id": "17",
@@ -187,7 +203,8 @@
       "title": "THE SLEEPWALKER",
       "Author": "",
       "likes": "95",
-      "view": "1k"
+      "view": "1k",
+      "price": "1800"
     },
     {
       "id": "18",
@@ -198,7 +215,8 @@
       "title": "Remind Me Tomorrow",
       "Author": "",
       "likes": "1050",
-      "view": "17k"
+      "view": "17k",
+      "price": "1900"
     },
     {
       "id": "19",
@@ -209,7 +227,8 @@
       "title": "JAPAN | Kyoto",
       "Author": "",
       "likes": "50",
-      "view": "600"
+      "view": "600",
+      "price": "400"
     },
     {
       "id": "20",
@@ -220,7 +239,8 @@
       "title": "#THEUPSIDEDOWN",
       "Author": "",
       "likes": "650",
-      "view": "7k"
+      "view": "7k",
+      "price": "2000"
     }
   ]
 }

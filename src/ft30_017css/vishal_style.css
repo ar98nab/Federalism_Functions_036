@@ -1,0 +1,43 @@
+/* Base styling for the form and labels */
+#vkft_30 div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  #vkft_30 label {
+    cursor: pointer;
+  }
+  
+  /* Hide the default checkbox */
+  #vkft_30 input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* Custom checkbox styling */
+  #vkft_30 input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  /* Fake check effect on hover */
+  #vkft_30 input[type="checkbox"] + label:hover::before,
+  #vkft_30 input[type="checkbox"]:hover + label::before {
+    background-color: #000;
+  }
+  
+  /* Checked state styling */
+  #vkft_30 input[type="checkbox"]:checked + label::before {
+    background-color: #000;
+    content: "\2713"; /* Unicode for checkmark */
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+  }
+  
