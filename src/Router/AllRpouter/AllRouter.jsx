@@ -7,7 +7,7 @@ import {
 import SignUp from '../../Redux/Authentication/SignUp';
 import LogIn from '../../Redux/Authentication/LogIn';
 
-const AllRouter = () => {
+export const AllRouter = () => {
   return (
     <Router>
       <Routes>
@@ -18,5 +18,3 @@ const AllRouter = () => {
     </Router>
   );
 };
-
-export default AllRouter;
