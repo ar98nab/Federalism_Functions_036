@@ -6,6 +6,7 @@ import { getDataSingle } from '../../Redux/ProductData/action';
 import { Avatar, Box, Button, ButtonGroup, Flex, Grid, Heading, IconButton, Image, Stack, Text, useColorModeValue } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
 import { SinglePage } from '../SinglePage/Singlepage';
+import { HireToast } from '../../Components/HireForm/HireToast';
 export const SingleFreelancer = () => {
     const { loading, data, error } = useSelector((state) => state.Data);
   const dispatch = useDispatch();
@@ -13,12 +14,15 @@ export const SingleFreelancer = () => {
 
   const filterdata = useMemo(() => {
     return data;
-  }, [data]);
+  }, [data]); 
+  
 
   useEffect(() => {
     getDataSingle(dispatch, id);
   }, []);
   return (
+    <>
+   
     <Grid templateColumns='repeat(2,1fr)' ml={"0px"}>
     <Box
     position={"fixed"}
@@ -105,6 +109,6 @@ export const SingleFreelancer = () => {
   </Box>
   <Box className='partsf' >
   <SinglePage/></Box>
-  </Grid>
+  </Grid></>
   )
 }

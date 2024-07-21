@@ -5,7 +5,7 @@ import {
   SIGN_UP_SUCCESS,
 } from './userActionTypes';
 
-const initState = {
+let initState = {
   users:null,
   errors:null,
   user: null,

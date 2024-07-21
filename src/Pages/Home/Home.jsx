@@ -117,6 +117,8 @@ export const Home = () => {
         </Container>
        
       </Container>
+      <LargeWithLogoLeft/>
+   <Low/>
     </div>
   );
 };

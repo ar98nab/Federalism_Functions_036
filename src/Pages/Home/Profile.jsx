@@ -11,7 +11,7 @@ import React from 'react';
 
 export default function Profile() {
   return (
-    <Box >
+    <Box style={{marginTop:"20px"}} >
       <Card
         direction={{ base: 'column', sm: 'row' }}
         overflow="hidden"

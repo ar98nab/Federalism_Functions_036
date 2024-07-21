@@ -162,6 +162,8 @@ const DesktopNav = () => {
                 border={0}
                 boxShadow={'xl'}
                 bg={popoverContentBgColor}
+                backgroundColor={"black"}
+                color={"white"}
                 p={4}
                 rounded={'xl'}
                 minW={'sm'}
