@@ -1,10 +1,17 @@
+
+import axios from 'axios';
+
 import React, { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getDataSingle } from '../../Redux/ProductData/action';
-import { Button, ButtonGroup, Flex, IconButton, Image } from '@chakra-ui/react';
+
+import { HireToast } from '../../Components/HireForm/HireToast';
+
+import { Button, ButtonGroup, Flex, IconButton, Image,CloseButton, useToast } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
 // import { color } from 'framer-motion';
+
 
 export const SinglePage = () => {
   const { loading, data, error } = useSelector((state) => state.Data);
@@ -21,6 +28,9 @@ export const SinglePage = () => {
   }, []);
   console.log(filterdata);
   return (
+
+    
+
     <>
       <div className="page">
         <Image
@@ -64,6 +74,7 @@ export const SinglePage = () => {
             );
           })}
         </div>
+
       </div>
     </>
   );
