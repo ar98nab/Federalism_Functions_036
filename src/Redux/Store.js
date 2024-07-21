@@ -9,4 +9,5 @@ const rootreducer = combineReducers({
   user: userReducer,
 });
 
+
 export const store = legacy_createStore(rootreducer, applyMiddleware(thunk));
