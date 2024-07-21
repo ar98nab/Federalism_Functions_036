@@ -27,9 +27,11 @@ import {
   BellIcon,
 } from '@chakra-ui/icons'
 import { Searchbar } from '../Search/Search'
+import { useSelector } from 'react-redux'
 
 export const Navbar=()=>{
   const { isOpen, onToggle } = useDisclosure()
+  const {user,error}=useSelector((state)=>state.user)
   const navigate=useNavigate()
 
   const handlelogin=()=>{
@@ -90,8 +92,8 @@ export const Navbar=()=>{
             borderRadius={"80px"}
             href={'#'}
             onClick={handlelogin}
-            >
-            Log In
+            > {typeof user==='object'?"Log Out":"Log In"}
+            
           </Button>
           <Button
             as={'a'}
@@ -107,7 +109,7 @@ export const Navbar=()=>{
             }}
             onClick={handlesignup}
             >
-            Sign Up
+           {typeof user==='object'?"Welcome ! ":"Sign UP"}
           </Button>
         </Stack>
       </Flex>
