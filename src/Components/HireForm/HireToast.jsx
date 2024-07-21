@@ -80,6 +80,18 @@ export const HireToast = () => {
     }
   }, [data]);
 
+  
+  const handleclick=()=>{
+    toast({
+      position:'top',
+      isClosable:true,
+      title: 'Thank You ! Message Sent Successfully',
+      containerStyle: {
+        border: '30px solid green',
+      },
+    })
+  }
+
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
@@ -147,7 +159,7 @@ export const HireToast = () => {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose} width="100%">
+            <Button colorScheme="blue" mr={3} onClick={handleclick} width="100%">
               Send Message
             </Button>
           </ModalFooter>

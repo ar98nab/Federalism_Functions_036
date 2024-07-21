@@ -5,11 +5,15 @@ import { Navbar } from './Components/Navbar/Navbar';
 
 
 import { PrivateRouter } from './Router/PrivateRouter/PrivateRouter';
+import LargeWithLogoLeft from './Pages/Home/LargeWithLogoLeft';
+import Low from './Pages/Home/Low';
 
 
 function App() {
   return (
     <>
+    <Navbar/>
+    <Allrouter/>
    
     </>
   );

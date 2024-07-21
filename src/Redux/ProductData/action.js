@@ -13,9 +13,9 @@ export const AddError=()=>{
 
 
 
-export const getData=async (dispatch,limit)=>{
+export const getData=async (dispatch)=>{
       dispatch(AddLoading())
-    axios.get(`http://localhost:3000/productdata?_limit=${limit}`).then((res)=>{
+    axios.get(`http://localhost:3000/productdata`).then((res)=>{
        dispatch(AddData(res.data))
     }).catch((err)=>{
       dispatch(AddError())
