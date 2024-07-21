@@ -2,7 +2,7 @@ Federalism_Functions_036
 
 ## Introduction
 It is a hiring website and also freelancers can showcase their work.
-## Project Typew
+## Project Type
 Frontend | Fullstack
 
 ## Deplolyed App
