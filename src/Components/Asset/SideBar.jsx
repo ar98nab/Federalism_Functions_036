@@ -17,7 +17,7 @@ import React from 'react';
 
 export default function SideBar() {
   return (
-    <div>
+    <div >
       <Accordion defaultIndex={[0]} allowMultiple >
         <AccordionItem>
           <h2>
