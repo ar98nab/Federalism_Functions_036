@@ -47,7 +47,7 @@ export const Searchbar = ({ onSearch }) => {
           children={<Search2Icon color="gray.600" />}
         />
         <Input
-          w={"500px"}
+          w={"400px"}
           mr={"50px"}
           borderRadius={"280px"}
           type="text"

@@ -135,11 +135,11 @@ const DesktopNav = () => {
                 p={2}
                 href={navItem.href ?? '#'}
                 fontSize={'xl'}
-                fontWeight={500}
+                fontWeight={"bold"}
                 color={'black'}
                 _hover={{
-                  textDecoration: 'none',
-                  color: linkHoverColor,
+                  textDecoration: 'underline',
+                  color: 'blue',
                 }}>
                 {navItem.label}
               </Box>
@@ -149,7 +149,9 @@ const DesktopNav = () => {
               <PopoverContent
                 border={0}
                 boxShadow={'xl'}
-                bg={popoverContentBgColor}
+                bg={'black'}
+                color='white'
+                fontSize={'large'}
                 p={4}
                 rounded={'xl'}
                 minW={'sm'}>
@@ -286,8 +288,8 @@ const NAV_ITEMS = [
     href: '#',
   },
   {
-    label: 'Jobs',
-    href: '#',
+    label: 'Registration',
+    href: '/registration',
   },
   {
     label: 'Pixel Pro',

@@ -117,3 +117,15 @@
   width: 100%;
   z-index: 1;
 }
+.partsf{
+  position: relative;
+  top:6px;
+  left:400px;
+  width:1100px;
+  
+}
+.Formone{
+  position: relative;
+  top:30px;
+  margin: 100px;
+}

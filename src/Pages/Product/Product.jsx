@@ -41,7 +41,7 @@ export const Product = () => {
           <NavLink to ={`/product/${ele.id}`} key={ele.id} className="card">
             <img className="image" src={ele.imageurl} alt="" />
             <div className="lowerpart">
-              <div className="title">{ele.Author}</div>
+              <NavLink to={`/freelancers/${ele.id}`} className="title">{ele.Author}</NavLink>
               <div className="rightpart">
                 <span class="material-symbols-outlined">thumb_up</span>
                 <span className="likes">{ele.likes}</span>

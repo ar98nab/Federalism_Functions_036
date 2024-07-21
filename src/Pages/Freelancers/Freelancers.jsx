@@ -16,6 +16,7 @@ import {
 import { useDispatch, useSelector } from 'react-redux'
 import { getData } from '../../Redux/ProductData/action'
 import { searchContext } from '../../Context/SearchContext/SearchContext'
+import { NavLink } from 'react-router-dom'
 
 export const SingleOwner = () => {
 //   const [follow,setfollow]=useState(0)
@@ -42,7 +43,7 @@ let filteredData = search.length === 0 ? select.data : select.data.filter((ele) 
     <Grid templateColumns='repeat(5, 1fr)' gap={6}>
   {
   filteredData && filteredData.map((ele)=>{
-    return ( <Box
+    return (<NavLink to={`/freelancers/${ele.id}`}> <Box
       maxW={'270px'}
       w={'full'}
       bg={useColorModeValue('white', 'gray.800')}
@@ -120,7 +121,7 @@ let filteredData = search.length === 0 ? select.data : select.data.filter((ele) 
           </Button>
         </Stack>
       </Box>
-    </Box>
+    </Box></NavLink>
 )
 }
 )
