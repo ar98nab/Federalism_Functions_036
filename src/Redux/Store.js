@@ -4,10 +4,12 @@ import { thunk } from 'redux-thunk';
 import { reducer as Productreducer } from './ProductData/reducer';
 import { userReducer } from './Authentication/userReducer';
 
+
 const rootreducer = combineReducers({
   Data: Productreducer,
   user: userReducer,
 });
+
 
 
 export const store = legacy_createStore(rootreducer, applyMiddleware(thunk));
