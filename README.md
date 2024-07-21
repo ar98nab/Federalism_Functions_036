@@ -1,8 +1,72 @@
-# React + Vite
+Federalism_Functions_036
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+It is a hiring website and also freelancers can showcase their work.
+## Project Typew
+Frontend | Fullstack
 
-Currently, two official plugins are available:
+## Deplolyed App
+Frontend: https://deployed-site.whatever
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+LocalHost
+ http://localhost:3000/users
+ http://localhost:3000/productdata
+
+## Directory Structure
+my-app/
+├─ frontend/
+│  ├─ ...
+
+## Video Walkthrough of the project
+
+
+## Video Walkthrough of the codebase
+
+
+## Features
+It is full working website for hiring and showcasing talents of freelancers
+
+- Sign up
+- Log in
+- Registration
+- Seraching
+- Upload image
+
+## design decisions or assumptions
+Here Users can come and sign up and then after log in they can access facilities. where they can create account and showcase their work. also if some one want to hire them ,they can hire.
+
+
+## Installation & Getting started
+-node modules
+-react
+-vite
+-redux
+-react-redux
+-redux-thunk
+-react-router-dom
+-axios
+-json server
+-npm run dev
+```bash
+npm install my-project
+cd my-project
+npm start
+```
+
+## Usage
+It is a hiring website and also freelancers can showcase their work.
+
+
+## Credentials
+ "email": "adutta441@gmail.com",
+      "password": "12Arnab@",
+
+
+
+## Technology Stack
+
+
+- React.jsx
+- Chakra UI
+- CSS
+- JS
