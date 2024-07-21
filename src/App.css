@@ -48,6 +48,7 @@
   gap: 20px;
   background-color: rgb(60, 53, 53);
   padding-top: 20px;
+  margin-top: 75px;
 }
 
 .card{
@@ -56,9 +57,34 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-color: white;
 }
-.image{
-  width: 350px;
-  height: 300px;
+.image-container {
+  position: relative;
+  width: 350px; 
+  height: 320px; 
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); 
+  color: white;
+  text-align: center;
+  padding: 10px;
+  opacity: 0; 
+  transition: opacity 0.5s ease;
+}
+
+.image-container:hover .title-overlay {
+  opacity: 1; 
 }
 .title{
   font-weight: bold;
@@ -74,15 +100,57 @@
   gap: 10px;
 }
 .single{
-  background-color: black;
+  background-color: rgb(54, 48, 48);
   display: flex;
  flex-direction: column;
- gap: 30px;
- padding:50px
+ gap: 20px;
+ padding:50px;
 }
 .singleimg{
- width: 1000px;
+ width: 1500px;
  height: 500px;
  margin: auto;
  
+}
+.save{
+  background-color: white;
+  position: fixed;
+  top: 80px;
+  left: 20px;
+}
+.page{
+  display: flex;
+  background-color: rgb(54, 48, 48);
+  margin-top: 75px;
+}
+.titles{
+  color: white;
+  font-weight: bolder;
+  font-size: xx-large;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.author{
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  margin-left: 10px;
+}
+.Navbar{
+  position: fixed;
+  top:0px;
+  width: 100%;
+  z-index: 1;
+}
+.partsf{
+  position: relative;
+  top:6px;
+  left:400px;
+  width:1100px;
+  
+}
+.Formone{
+  position: relative;
+  top:30px;
+  margin: 100px;
 }

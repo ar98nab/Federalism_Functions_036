@@ -29,14 +29,12 @@ export const Searchbar = ({ onSearch }) => {
     };
   }
 
-  const debouncedHandleSearch = debounce(handleSearch, 2000);
+  const debouncedHandleSearch = debounce(handleSearch, 1000);
 
   function handleSearch(e) {
-    if (e.target.value.length < 3) {
-      return false;
-    } else {
+   
       setSearch(e.target.value);
-    }
+    
   }
    console.log(search);
   return (
@@ -47,7 +45,7 @@ export const Searchbar = ({ onSearch }) => {
           children={<Search2Icon color="gray.600" />}
         />
         <Input
-          w={"500px"}
+          w={"550px"}
           mr={"50px"}
           borderRadius={"280px"}
           type="text"
