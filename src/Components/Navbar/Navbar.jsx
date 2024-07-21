@@ -1,5 +1,5 @@
-import React from 'react'
-import {NavLink, useNavigate} from 'react-router-dom'
+import React from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import {
   Box,
   Flex,
@@ -15,34 +15,37 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
-  SkipNavLink,
   Image,
-  Center,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 import {
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
   ChevronRightIcon,
   BellIcon,
-} from '@chakra-ui/icons'
-import { Searchbar } from '../Search/Search'
-import { useSelector } from 'react-redux'
+} from '@chakra-ui/icons';
+import { Searchbar } from '../Search/Search';
+import { useSelector } from 'react-redux';
 
-export const Navbar=()=>{
-  const { isOpen, onToggle } = useDisclosure()
-  const {user,error}=useSelector((state)=>state.user)
-  const navigate=useNavigate()
+export const Navbar = () => {
+  const { isOpen, onToggle } = useDisclosure();
+  const { user } = useSelector((state) => state.user);
+  const navigate = useNavigate();
 
-  const handlelogin=()=>{
-     navigate("/LogIn")
-  }
-  const handlesignup=()=>{
-    navigate("/SignUp")
- }
+  const handleLogin = () => {
+    navigate('/LogIn');
+  };
+
+  const handleSignup = () => {
+    navigate('/SignUp');
+  };
+
+  const handleLogout = () => {
+    navigate('/');
+  };
 
   return (
-    <Box className='Navbar' >
+    <Box className="Navbar">
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
@@ -52,11 +55,9 @@ export const Navbar=()=>{
         borderBottom={1}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}>
-        <Flex
-          flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}>
+        align={'center'}
+      >
+        <Flex flex={{ base: 1, md: 'auto' }} ml={{ base: -2 }} display={{ base: 'flex', md: 'none' }}>
           <IconButton
             onClick={onToggle}
             icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
@@ -68,49 +69,58 @@ export const Navbar=()=>{
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            <Image w={"100px"} h={"40px"} src="../src/Components/Navbar/logonew.png" alt="Logo" />
+            color={useColorModeValue('gray.800', 'white')}
+          >
+            <Image w={'100px'} h={'40px'} src="../src/Components/Navbar/logonew.png" alt="Logo" />
           </Text>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
-        <Searchbar/>
-        <BellIcon h={"60px"} mr={"20px"}/>
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}>
-          <Button  as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'md'}
-            fontWeight={600}
-            color={'blue'}
-            bg={'aqua'}
-            borderRadius={"80px"}
-            href={'#'}
-            onClick={handlelogin}
-            > {typeof user==='object'?"Log Out":"Log In"}
-            
-          </Button>
-          <Button
-            as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'md'}
-            fontWeight={600}
-            color={'white'}
-            bg={'blue'}
-            borderRadius={"80px"}
-            href={'#'}
-            _hover={{
-              bg: 'blue.600',
-            }}
-            onClick={handlesignup}
+        <Searchbar />
+        <BellIcon h={'60px'} mr={'20px'} />
+        <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6}>
+          {user != null ? (
+            <Button
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'md'}
+              fontWeight={600}
+              color={'blue'}
+              bg={'aqua'}
+              borderRadius={'80px'}
+              onClick={handleLogout}
             >
-           {typeof user==='object'?"Welcome ! ":"Sign UP"}
-          </Button>
+              Log Out
+            </Button>
+          ) : (
+            <Button
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'md'}
+              fontWeight={600}
+              color={'blue'}
+              bg={'aqua'}
+              borderRadius={'80px'}
+              onClick={handleLogin}
+            >
+              Log In
+            </Button>
+          )}
+
+          {user == null && (
+            <Button
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'md'}
+              fontWeight={600}
+              color={'white'}
+              bg={'blue'}
+              borderRadius={'80px'}
+              _hover={{ bg: 'blue.600' }}
+              onClick={handleSignup}
+            >
+              Sign Up
+            </Button>
+          )}
         </Stack>
       </Flex>
 
@@ -118,13 +128,13 @@ export const Navbar=()=>{
         <MobileNav />
       </Collapse>
     </Box>
-  )
-}
+  );
+};
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200')
-  const linkHoverColor = useColorModeValue('gray.800', 'white')
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800')
+  const linkColor = useColorModeValue('gray.600', 'gray.200');
+  const linkHoverColor = useColorModeValue('gray.800', 'white');
+  const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
     <Stack direction={'row'} spacing={4}>
@@ -132,31 +142,30 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
-              <Box
-                as="a"
+              <NavLink
+                to={navItem.href ?? '#'}
                 p={2}
-                href={navItem.href ?? '#'}
-                fontSize={'xl'}
-                fontWeight={"bold"}
-                color={'black'}
+                fontSize={'lg'}
+                fontWeight={'bold'}
+                color={linkColor}
                 _hover={{
                   textDecoration: 'underline',
-                  color: 'blue',
-                }}>
+                  color: linkHoverColor,
+                }}
+              >
                 {navItem.label}
-              </Box>
+              </NavLink>
             </PopoverTrigger>
 
             {navItem.children && (
               <PopoverContent
                 border={0}
                 boxShadow={'xl'}
-                bg={'black'}
-                color='white'
-                fontSize={'large'}
+                bg={popoverContentBgColor}
                 p={4}
                 rounded={'xl'}
-                minW={'sm'}>
+                minW={'sm'}
+              >
                 <Stack>
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
@@ -168,25 +177,23 @@ const DesktopNav = () => {
         </Box>
       ))}
     </Stack>
-  )
-}
+  );
+};
 
 const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
-    <Box
-      as="a"
-      href={href}
+    <NavLink
+      to={href}
       role={'group'}
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      fontWeight={'bold'}
+      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
+    >
       <Stack direction={'row'} align={'center'}>
         <Box>
-          <Text
-            transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
-            fontWeight={500}>
+          <Text transition={'all .3s ease'} _groupHover={{ color: 'pink.400' }} fontWeight={500}>
             {label}
           </Text>
           <Text fontSize={'sm'}>{subLabel}</Text>
@@ -198,13 +205,14 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
           _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
           justify={'flex-end'}
           align={'center'}
-          flex={1}>
+          flex={1}
+        >
           <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
-    </Box>
-  )
-}
+    </NavLink>
+  );
+};
 
 const MobileNav = () => {
   return (
@@ -213,58 +221,43 @@ const MobileNav = () => {
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>
-  )
-}
+  );
+};
 
 const MobileNavItem = ({ label, children, href }) => {
-  const { isOpen, onToggle } = useDisclosure()
+  const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Stack spacing={4} onClick={children && onToggle}>
-      <Box
+      <Flex
         py={2}
-        as="a"
-        href={href ?? '#'}
+        as={NavLink}
+        to={href ?? '#'}
         justifyContent="space-between"
         alignItems="center"
-        _hover={{
-          textDecoration: 'none',
-        }}>
+        fontWeight={'bold'}
+        _hover={{ textDecoration: 'none' }}
+      >
         <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
           {label}
         </Text>
         {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={'all .25s ease-in-out'}
-            transform={isOpen ? 'rotate(180deg)' : ''}
-            w={6}
-            h={6}
-          />
+          <Icon as={ChevronDownIcon} transition={'all .25s ease-in-out'} transform={isOpen ? 'rotate(180deg)' : ''} w={6} h={6} />
         )}
-      </Box>
+      </Flex>
 
-      <Collapse  in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
-          align={'start'}>
-          {children &&
-            children.map((child) => (
-              <NavLink as="a" key={child.label} py={2} to={child.href}>
-                {child.label}
-              </NavLink>
-            ))}
+      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
+        <Stack mt={2} pl={4} borderLeft={1} borderStyle={'solid'} borderColor={useColorModeValue('gray.200', 'gray.700')} align={'start'}>
+          {children && children.map((child) => (
+            <NavLink key={child.label} py={2} to={child.href} style={{ fontWeight: 'bold' }}>
+              {child.label}
+            </NavLink>
+          ))}
         </Stack>
       </Collapse>
     </Stack>
-  )
-}
-
-
+  );
+};
 
 const NAV_ITEMS = [
   {
@@ -279,12 +272,11 @@ const NAV_ITEMS = [
         href: '#',
       },
       {
-        label: 'Curated Gallaries',
+        label: 'Curated Galleries',
         href: '#',
       },
     ],
   },
- 
   {
     label: 'Assets',
     href: '#',
@@ -314,4 +306,4 @@ const NAV_ITEMS = [
       },
     ],
   },
-]
+];
