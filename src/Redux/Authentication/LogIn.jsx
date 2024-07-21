@@ -14,9 +14,8 @@ import {
 } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import bgImage from '../../assets/behanceBg.avif';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { login } from './userActions';
-import HireToast from '../../Components/HireForm/HireToast';
 
 const LogIn = () => {
   const bgColor = useColorModeValue('white', 'gray.900');
@@ -26,10 +25,10 @@ const LogIn = () => {
   const dispatch = useDispatch();
   const error = useSelector((state) => state.user.error);
   const toast = useToast();
-
+  const navigate=useNavigate() 
   const handleSubmit = (e) => {
     e.preventDefault();
-    <HireToast />;
+
     dispatch(
       login(email, password, () => {
         toast({
@@ -41,6 +40,7 @@ const LogIn = () => {
         });
       })
     );
+    navigate("/")
   };
 
   return (

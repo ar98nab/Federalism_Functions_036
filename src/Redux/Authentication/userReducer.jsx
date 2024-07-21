@@ -6,6 +6,8 @@ import {
 } from './userActionTypes';
 
 const initState = {
+  users:null,
+  errors:null,
   user: null,
   error: null,
 };
@@ -13,9 +15,9 @@ const initState = {
 export const userReducer = (state = initState, action) => {
   switch (action.type) {
     case SIGN_UP_SUCCESS:
-      return { ...state, user: action.payload, error: null };
+      return { ...state, users: action.payload, errors: null };
     case SIGN_UP_FAILURE:
-      return { ...state, user: null, error: action.payload };
+      return { ...state, users: null, errors: action.payload };
     case LOGIN_SUCCESS:
       return { ...state, user: action.payload, error: null };
     case LOGIN_FAILURE:
@@ -24,5 +26,3 @@ export const userReducer = (state = initState, action) => {
       return state;
   }
 };
-
-
