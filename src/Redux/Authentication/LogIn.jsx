@@ -16,7 +16,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import bgImage from '../../assets/behanceBg.avif';
 import { Link } from 'react-router-dom';
 import { login } from './userActions';
-import HireToast from '../../Components/HireForm/HireToast';
 
 const LogIn = () => {
   const bgColor = useColorModeValue('white', 'gray.900');
@@ -29,7 +28,7 @@ const LogIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    <HireToast />;
+
     dispatch(
       login(email, password, () => {
         toast({

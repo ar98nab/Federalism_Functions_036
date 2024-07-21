@@ -1,9 +1,10 @@
-import axios from "axios";
-import React, { useEffect, useMemo } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { getDataSingle } from "../../Redux/ProductData/action";
-import { CloseButton, useToast } from "@chakra-ui/react";
+import axios from 'axios';
+import React, { useEffect, useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { getDataSingle } from '../../Redux/ProductData/action';
+import { CloseButton, useToast } from '@chakra-ui/react';
+import { HireToast } from '../../Components/HireForm/HireToast';
 
 export const SinglePage = () => {
   const { loading, data, error } = useSelector((state) => state.Data);
@@ -12,9 +13,9 @@ export const SinglePage = () => {
   const { id } = useParams();
   const toast = useToast();
 
-const filterdata=useMemo(()=>{
-     return data
-},[data])
+  const filterdata = useMemo(() => {
+    return data;
+  }, [data]);
 
   useEffect(() => {
     getDataSingle(dispatch, id);
@@ -27,11 +28,7 @@ const filterdata=useMemo(()=>{
       <img className="singleimg" src={filterdata.imageurltwo} alt="" />
       <img className="singleimg" src={filterdata.imageurlthree} alt="" />
       <div>
-        {toast({
-          title: `${filterdata.Author} is  available for hire`,
-          description: "Availablity:Available within next few days",
-          isClosable: true,
-        })}
+        <HireToast />
       </div>
     </div>
   );
