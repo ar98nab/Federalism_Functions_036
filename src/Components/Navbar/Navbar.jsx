@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
+import {NavLink, useNavigate} from 'react-router-dom'
 import {
   Box,
   Flex,
@@ -30,9 +30,17 @@ import { Searchbar } from '../Search/Search'
 
 export const Navbar=()=>{
   const { isOpen, onToggle } = useDisclosure()
+  const navigate=useNavigate()
+
+  const handlelogin=()=>{
+     navigate("/LogIn")
+  }
+  const handlesignup=()=>{
+    navigate("/SignUp")
+ }
 
   return (
-    <Box >
+    <Box className='Navbar' >
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
@@ -80,7 +88,9 @@ export const Navbar=()=>{
             color={'blue'}
             bg={'aqua'}
             borderRadius={"80px"}
-            href={'#'}>
+            href={'#'}
+            onClick={handlelogin}
+            >
             Log In
           </Button>
           <Button
@@ -94,7 +104,9 @@ export const Navbar=()=>{
             href={'#'}
             _hover={{
               bg: 'blue.600',
-            }}>
+            }}
+            onClick={handlesignup}
+            >
             Sign Up
           </Button>
         </Stack>
@@ -284,6 +296,10 @@ const NAV_ITEMS = [
   {
     label: 'Hire Freelancers',
     children: [
+      {
+        label: 'Freelance',
+        href: '/freelancers',
+      },
       {
         label: 'My Freelance Projects',
         href: '#',

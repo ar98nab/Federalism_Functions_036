@@ -10,7 +10,7 @@ const initState = {
   error: null,
 };
 
-const userReducer = (state = initState, action) => {
+export const userReducer = (state = initState, action) => {
   switch (action.type) {
     case SIGN_UP_SUCCESS:
       return { ...state, user: action.payload, error: null };
@@ -25,4 +25,4 @@ const userReducer = (state = initState, action) => {
   }
 };
 
-export default userReducer;
+
