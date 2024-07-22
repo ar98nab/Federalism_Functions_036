@@ -25,12 +25,13 @@ import {
   BellIcon,
 } from '@chakra-ui/icons';
 import { Searchbar } from '../Search/Search';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
   const { user } = useSelector((state) => state.user);
   const navigate = useNavigate();
+  const dispatch=useDispatch()
 
   const handleLogin = () => {
     navigate('/LogIn');
@@ -41,6 +42,7 @@ export const Navbar = () => {
   };
 
   const handleLogout = () => {
+    dispatch({ type: 'LOGOUT' });
     navigate('/');
   };
 
@@ -71,7 +73,7 @@ export const Navbar = () => {
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}
           >
-            <Image w={'100px'} h={'40px'} src="../src/Components/Navbar/logonew.png" alt="Logo" />
+            <NavLink to={"/"}><Image w={'100px'} h={'40px'} src="../src/Components/Navbar/logonew.png" alt="Logo" /></NavLink>
           </Text>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -143,17 +145,19 @@ const DesktopNav = () => {
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
               <NavLink
-                to={navItem.href ?? '#'}
+                to={navItem.href ?? '#'}>
+                  <Box
                 p={2}
                 fontSize={'lg'}
                 fontWeight={'bold'}
                 color={linkColor}
                 _hover={{
                   textDecoration: 'underline',
-                  color: linkHoverColor,
+                  color: "blue",
                 }}
               >
                 {navItem.label}
+                </Box>
               </NavLink>
             </PopoverTrigger>
 
