@@ -7,7 +7,7 @@ Frontend | Fullstack
 
 ## Deplolyed App
 Frontend: https://deployed-site.whatever
-
+Netlify : https://pixelmasai.netlify.app/
 LocalHost
  http://localhost:3000/users
  http://localhost:3000/productdata
