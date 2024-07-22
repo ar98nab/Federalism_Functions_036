@@ -22,7 +22,6 @@ export const SingleFreelancer = () => {
   }, []);
   return (
     <>
-   
     <Grid templateColumns='repeat(2,1fr)' ml={"0px"}>
     <Box
     position={"fixed"}

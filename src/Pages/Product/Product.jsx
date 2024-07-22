@@ -13,7 +13,7 @@ export const Product = () => {
   const [limit, setLimit] = useState(80);
   const { loading, data, error } = useSelector((state) => state.Data);
   const dispatch = useDispatch();
-  console.log(data);
+  
 
   useEffect(() => {
     dispatch(getData);
@@ -28,7 +28,7 @@ export const Product = () => {
     );
   }
 
-  console.log(filteredData);
+ 
 
   // const handlescroll=()=>{
   //   if(window.innerHeight+window.scrollY>=document.body.offsetHeight){

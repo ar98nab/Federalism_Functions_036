@@ -1,32 +1,36 @@
 import { Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure, useToast } from '@chakra-ui/react'
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 
-export const Upload = ({id}) => {
+export const Upload = ({unique}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [url,seturl]=useState("")
     const toast=useToast()
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
-
+    const {loading,data,error}=useSelector((state)=>state.Data)
 
     const handlechange=(e)=>{
         seturl(e.target.value)
     }
    
-    const handleupload= async (e)=>{
+    const handleupload= (e)=>{
        e.preventDefault()
        try{
         let updatedProductdata = {
-            ...productdata,
-            imageurlone: [...productdata.imageurlone, url] 
+            ...data,
+            imageurlone: [...data.imageurlone, url] 
           };
-    
-          const response = await axios.patch(`http://localhost:3000/productdata/${id}`, updatedProductdata);
+
+          console.log(updatedProductdata);
+
+        axios.patch(`http://localhost:3000/productdata/${unique}`, updatedProductdata);
+
        }
        catch (error) {
         toast({
           title: 'An error occurred.',
-          description: "Unable to save",
+          description: "Unable to save", 
           status: 'error',
           duration: 3000,
           isClosable: true,
