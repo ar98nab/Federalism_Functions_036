@@ -18,9 +18,7 @@ my-app/
 │  ├─ ...
 
 ## Video Walkthrough of the project
-
-
-## Video Walkthrough of the codebase
+https://youtu.be/TNCQIMMp7-Y
 
 
 ## Features
