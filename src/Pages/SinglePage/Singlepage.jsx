@@ -25,7 +25,6 @@ import { Upload } from '../../Components/Upload/Upload';
 
 export const SinglePage = () => {
   const { loading, data, error } = useSelector((state) => state.Data);
-  console.log(data);
   const dispatch = useDispatch();
   const { id } = useParams();
   
@@ -36,7 +35,7 @@ export const SinglePage = () => {
   useEffect(() => {
     getDataSingle(dispatch, id);
   }, []);
-  console.log(filterdata);
+  
  
   
   return (

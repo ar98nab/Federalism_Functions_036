@@ -115,7 +115,7 @@
 }
 .save{
   background-color: white;
-  position: fixed;
+  position: relative;
   top: 80px;
   left: 20px;
 }
@@ -162,7 +162,7 @@
   background-color:greenyellow;
   font-size: large;
   font-weight: bold;
-  position: relative;
+  position: absolute;
   top:50px;
-  left:980px
+  left:85vw
 }
