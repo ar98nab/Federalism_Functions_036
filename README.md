@@ -1,7 +1,7 @@
 Federalism_Functions_036
 
 ## Introduction
-It is a hiring website and also freelancers can showcase their work.
+Pixel is an online platform  that allows creative professionals to showcase their work and connect with others in the industry. It serves as a social network and portfolio site for artists, designers, photographers, illustrators, and other creatives to display their projects, gain exposure, and potentially attract clients or job opportunities.
 ## Project Type
 Frontend | Fullstack
 
