@@ -1,6 +1,7 @@
 import {
   LOGIN_FAILURE,
   LOGIN_SUCCESS,
+  LOGOUT,
   SIGN_UP_FAILURE,
   SIGN_UP_SUCCESS,
 } from './userActionTypes';
@@ -22,6 +23,8 @@ export const userReducer = (state = initState, action) => {
       return { ...state, user: action.payload, error: null };
     case LOGIN_FAILURE:
       return { ...state, user: null, error: action.payload };
+    case LOGOUT:
+      return {...state,user:null}
     default:
       return state;
   }
